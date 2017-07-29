@@ -1,0 +1,1 @@
+select DATETIME_ID,SN,EUtranCellTDD,pmRrcConnMax, 100*convert(float,(pmRrcConnEstabSucc/pmRrcConnEstabAtt)*(pmErabEstabSuccInit+pmErabEstabSuccAdded)/(pmErabEstabAttInit+pmErabEstabAttAdded)) as AccessRatefrom DC_E_ERBS_EUTRANCELLTDD_RAW where DATETIME_ID = "Jul 27 2017 03:15PM" and pmRrcConnMax > 400 and AccessRate < 85
